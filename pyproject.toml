@@ -1,0 +1,28 @@
+[project]
+name = "MADS-exam-24"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Raoul Grouls", email = "Raoul.Grouls@han.nl"},
+]
+dependencies = [
+    "mltrainer>=0.1.122",
+    "mads-datasets>=0.3.10",
+    "seaborn>=0.13.1",
+]
+requires-python = ">=3.10,<3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+package-type = "application"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "ruff>=0.1.13",
+    "mypy>=1.8.0",
+    "black>=23.12.1",
+    "isort>=5.13.2",
+]
