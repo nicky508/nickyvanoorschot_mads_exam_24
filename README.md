@@ -40,20 +40,24 @@ There are two notebooks with models. He has tried two approaches: a 2D approach,
 ## Your task
 
 You can find the models in `src/models.py`, but they are also in the notebooks themselves. Your task is to:
-1. Explore the models manually, to get some intuition about their performance
-2. Based on your knowlodge about hypertuning, you might want to change and expand the models: add more parameters you might want to tune, add additional layers, and if you feel like it you could also create additional models that you think might be promising.
-3. When you are happy with your manual research, set up a hypertune.py file and hypertune the models with Ray. Make sure you log everything (eg with ray, mlflow of gin-config).
+1. Explore the models manually, for both datasets, to get some intuition about their performance
+2. Based on your knowlodge about hypertuning, you might want to change and expand the models: add more parameters you might want to tune, add additional layers, and if you feel like it you could also create additional models that you think might be promising. Try to balance exploit (improve what is already there) and explore (creativity/curiosity of new things).
+3. When you are happy with your manual research, set up a hypertune.py file and hypertune the models with Ray. Make sure you log everything thats relevant for your model (eg with ray, mlflow of gin-config) including which dataset you use.
 4. Create a notebook where you explore your hypertuning results, and save the plots that are most relevant for your research.
-5. Create a short summary (2 pages) of your results, where you show the relevant hyperparameters you have tuned. Yes, I know you did more than the summary, but I want to see that you can summarize your results in a clear way. You can take inspiration from table 3 in the (attention is all you need)[https://arxiv.org/pdf/1706.03762.pdf] paper for an excelent summary of hypertuning. Export your summary as pdf in your repo.
+5. Create a short summary (2 pages) of your results. Start with an overview of your searchspace, and show the relevant hyperparameters you have tuned. You can take inspiration from table 3 in the (attention is all you need)[https://arxiv.org/pdf/1706.03762.pdf] paper for an excelent summary of hypertuning. Export your summary as pdf in your repo.
 
 Because this is a medical dataset, an we are trying to spot disease, the client thinks it is more important that you find as much sick people as possible, even if that means you will have more false positives. So, they want you to optimize for recall, more than for precision.
 
-You will be graded for:
+When you are done, do two things:
+0. Make your own private repo (dont clone)
+1. invite https://github.com/raoulg to your repo as a collaborator
+2. Upload the summary pdf to canvas
 
-- Overall presentation and clarity of your work. (10%)
-- The level of your change and expansion of the models: balance performance (exploit) and creativity/curiosity (explore). (30%)
-- The relevance of your starting hyperparameters, based on your manual hypertuning. (10%)
-- The quality of your implementation of the hypertuning in hypertune.py (20%)
-- The clarity and relevance of your summary (30%)
+You will be graded for:
+- Overall presentation and clarity of your work (organisation, comments, typehinting, etc). (10%)
+- (1, 2) The level of change and expansion of the models: balance performance (exploit) and creativity/curiosity (explore). (30%)
+- (2, 3) The relevance of your starting hyperparameters, based on your manual hypertuning. (10%)
+- (3) The quality of your implementation of the hypertuning in hypertune.py (20%)
+- (4, 5) The clarity and relevance of your summary (30%)
 
 During the oral exam we will discuss your work, and you will have to explain your choices.
