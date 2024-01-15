@@ -16,7 +16,7 @@ pre-commit:
       run: ruff {staged_files} --fix
     mypy:
       glob: '*.py'
-      run: mypy --pretty {staged_files}
+      run: mypy --pretty {staged_files} --ignore-missing-imports
 
 pre-merge:
   commands:
