@@ -7,6 +7,7 @@ from filelock import FileLock
 from loguru import logger
 from mltrainer import ReportTypes, Trainer, TrainerSettings, metrics, rnn_models
 from mltrainer.preprocessors import PaddedPreprocessor
+import numpy as np
 from ray import tune
 from ray.tune import CLIReporter
 from ray.tune.schedulers.hb_bohb import HyperBandForBOHB
@@ -15,6 +16,12 @@ from ray.tune.search.bohb import TuneBOHB
 SAMPLE_INT = tune.search.sample.Integer
 SAMPLE_FLOAT = tune.search.sample.Float
 
+class Accuracy:
+    def __repr__(self) -> str:
+        return "Accuracy"
+
+    def __call__(self, y, yhat):
+        return (np.argmax(yhat, axis=1) == y).sum() / len(yhat)
 
 def train(config: Dict):
     """
@@ -39,7 +46,7 @@ def train(config: Dict):
 
     # we set up the metric
     # and create the model with the config
-    accuracy = metrics.Accuracy()
+    accuracy = Accuracy()
     model = rnn_models.GRUmodel(config)
 
     trainersettings = TrainerSettings(
