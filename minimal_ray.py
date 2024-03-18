@@ -73,6 +73,7 @@ def train_cifar(config):
 
     device = "cpu"
     if torch.cuda.is_available():
+        print("Found GPU")
         device = "cuda:0"
         if torch.cuda.device_count() > 1:
             net = nn.DataParallel(net)
@@ -163,7 +164,7 @@ def train_cifar(config):
         # Here we save a checkpoint. It is automatically registered with
         # Ray Tune and will potentially be accessed through in ``get_checkpoint()``
         # in future iterations.
-        # Note to save a file like checkpoint, you still need to put it under a directory
+        # to save a file like checkpoint, you still need to put it under a directory
         # to construct a checkpoint.
         with tempfile.TemporaryDirectory() as temp_checkpoint_dir:
             path = os.path.join(temp_checkpoint_dir, "checkpoint.pt")
