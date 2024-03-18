@@ -25,7 +25,6 @@ class CNN(nn.Module):
         self.convolutions = nn.ModuleList(
             [
                 ConvBlock(1, hidden),
-                nn.ReLU(),
             ]
         )
 
