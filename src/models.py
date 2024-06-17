@@ -1,6 +1,7 @@
 import math
 
 import torch
+from loguru import logger
 from torch import Tensor, nn
 
 
@@ -29,15 +30,16 @@ class CNN(nn.Module):
         )
 
         for i in range(config["num_layers"]):
-            self.convolutions.extend([ConvBlock(hidden, hidden), nn.ReLU()])
-
+            self.convolutions.extend([ConvBlock(hidden, hidden)])
         self.convolutions.append(nn.MaxPool2d(2, 2))
-        # there is one 2x2 maxpool, so 16x12 -> 8x6
-        # this gives us (batch, channels, 8, 6)
+
+        activation_map_size = config["shape"][0] // 2 * config["shape"][1] // 2
+        logger.info(f"Activation map size: {activation_map_size}")
+        logger.info(f"Input linear: {activation_map_size * hidden}")
 
         self.dense = nn.Sequential(
             nn.Flatten(),
-            nn.Linear((8 * 6) * hidden, hidden),
+            nn.Linear(activation_map_size * hidden, hidden),
             nn.ReLU(),
             nn.Linear(hidden, config["num_classes"]),
         )
@@ -75,6 +77,7 @@ class PositionalEncoding(nn.Module):
 
 class TransformerBlock(nn.Module):
     def __init__(self, hidden_size, num_heads, dropout):
+        # feel free to change the input parameters of the constructor
         super(TransformerBlock, self).__init__()
         self.attention = nn.MultiheadAttention(
             embed_dim=hidden_size,
@@ -86,18 +89,17 @@ class TransformerBlock(nn.Module):
             nn.Linear(hidden_size, hidden_size),
             nn.ReLU(),
             nn.Linear(hidden_size, hidden_size),
-            nn.ReLU(),
         )
         self.layer_norm1 = nn.LayerNorm(hidden_size)
         self.layer_norm2 = nn.LayerNorm(hidden_size)
 
     def forward(self, x):
-        identity = x.clone()
+        identity = x.clone()  # skip connection
         x, _ = self.attention(x, x, x)
-        x = self.layer_norm1(x + identity)
-        identity = x.clone()
+        x = self.layer_norm1(x + identity)  # Add & Norm skip
+        identity = x.clone()  # second skip connection
         x = self.ff(x)
-        x = self.layer_norm2(x + identity)
+        x = self.layer_norm2(x + identity)  # Add & Norm skip
         return x
 
 
@@ -129,13 +131,17 @@ class Transformer(nn.Module):
         self.out = nn.Linear(config["hidden"], config["output"])
 
     def forward(self, x: Tensor) -> Tensor:
-        x = self.conv1d(x.transpose(1, 2))
-        x = self.pos_encoder(x.transpose(1, 2))
+        # streamer:         (batch, seq_len, channels)
+        # conv1d:           (batch, channels, seq_len)
+        # pos_encoding:     (batch, seq_len, channels)
+        # attention:        (batch, seq_len, channels)
+        x = self.conv1d(x.transpose(1, 2))  # flip channels and seq_len for conv1d
+        x = self.pos_encoder(x.transpose(1, 2))  # flip back to seq_len and channels
 
         # Apply multiple transformer blocks
         for transformer_block in self.transformer_blocks:
             x = transformer_block(x)
 
-        x = x.mean(dim=1)
+        x = x.mean(dim=1)  # Global Average Pooling
         x = self.out(x)
         return x

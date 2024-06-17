@@ -13,8 +13,8 @@ class HeartDataset2D:
     ) -> None:
         self.df = pd.read_parquet(path)
         self.target = target
-        x = self.df.drop("target", axis=1)
-        x = torch.tensor(x.values, dtype=torch.float32)
+        _x = self.df.drop("target", axis=1)
+        x = torch.tensor(_x.values, dtype=torch.float32)
 
         # original length is 187, which only allows for 11x17 2D tensors
         # 3*2**6 = 192. This makes it easier to reshape the data
@@ -47,8 +47,8 @@ class HeartDataset1D:
     ) -> None:
         self.df = pd.read_parquet(path)
         self.target = target
-        x = self.df.drop("target", axis=1)
-        x = torch.tensor(x.values, dtype=torch.float32)
+        _x = self.df.drop("target", axis=1)
+        x = torch.tensor(_x.values, dtype=torch.float32)
         # padded to 3*2**6 = 192
         # again, this helps with reshaping for attention & using heads
         self.x = torch.nn.functional.pad(x, (0, 3 * 2**6 - x.size(1)))
