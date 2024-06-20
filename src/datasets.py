@@ -39,13 +39,20 @@ class HeartDataset2D:
         return f"Heartdataset2D (#{len(self)})"
 
 
+#Adjusted the dataset, for VAE (removing the abnormal heartsignals)
 class HeartDataset1D:
     def __init__(
         self,
         path: Path,
         target: str,
+        outliersRemoval: bool,
     ) -> None:
         self.df = pd.read_parquet(path)
+        
+        #remove abnormal heart (y == 1)
+        if(outliersRemoval):
+            self.df = self.df[self.df.target != 1.]
+        
         self.target = target
         _x = self.df.drop("target", axis=1)
         x = torch.tensor(_x.values, dtype=torch.float32)

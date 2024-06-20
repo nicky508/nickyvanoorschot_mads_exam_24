@@ -1,0 +1,23 @@
+import gin.torch.external_configurables
+
+Encoder.config = {
+    "input" : 192,
+    "h1" : 128,
+    "h2" : 64,
+    "h3" : 16,
+    "h4" : 8,
+    "latent" : 2
+}
+
+Decoder.config = {
+    "input" : 192,
+    "h1" : 128,
+    "h2" : 64,
+    "h3" : 16,
+    "h4" : 8,
+    "latent" : 2
+}
+
+
+
+
