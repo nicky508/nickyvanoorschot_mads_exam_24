@@ -20,7 +20,7 @@ class Encoder(nn.Module):
             nn.ReLU(),
             nn.Linear(config["h3"], config["h4"]),
             nn.ReLU(),
-            nn.Linear(config["h4"], config["latent"]),
+            nn.Linear(config["h2"], config["latent"]),
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -33,7 +33,7 @@ class Decoder(nn.Module):
     def __init__(self, config: Dict) -> None:
         super().__init__()
         self.decode = nn.Sequential(
-            nn.Linear(config["latent"], config["h4"]),
+            nn.Linear(config["latent"], config["h2"]),
             nn.ReLU(),
             nn.Linear(config["h4"], config["h3"]),
             nn.ReLU(),
@@ -46,7 +46,6 @@ class Decoder(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = self.decode(x)
-        # x = x.reshape((-1, 28, 28, 1))
         return x
 
 
@@ -61,14 +60,9 @@ class ReconstructionLoss:
         # Compute squared error
         sqe = (y - yhat) ** 2
         
-        # Sum over appropriate dimensions
-        summed = torch.sum(sqe, dim=1)  # Sum over sequence_length dimension
-        
-        # Compute mean loss
-        mean_loss = torch.mean(summed)
-        
-        return mean_loss
 
+        summed = torch.sum(sqe, dim=1) 
+        return torch.mean(summed)
 
 @gin.configurable
 class AutoEncoder(nn.Module):
