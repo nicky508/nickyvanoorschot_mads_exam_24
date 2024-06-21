@@ -19,12 +19,17 @@ class Encoder(nn.Module):
             nn.Conv1d(in_channels=128, out_channels=128, kernel_size=3, stride=1, padding=1),
             nn.ReLU(),
             nn.BatchNorm1d(128),
+            nn.Conv1d(in_channels=128, out_channels=128, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.BatchNorm1d(128),
             nn.MaxPool1d(kernel_size=2, stride=2, padding=0),
-            nn.Conv1d(in_channels=128, out_channels=2, kernel_size=3, stride=1, padding=1),
+            nn.Conv1d(in_channels=128, out_channels=1, kernel_size=3, stride=1, padding=1),
+            nn.MaxPool1d(kernel_size=2),
+            nn.MaxPool1d(kernel_size=2),
+            nn.MaxPool1d(kernel_size=2),
         )
         
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        # print(x.shape)
         x = x.permute(0,2,1)
         latent = self.encode(x)
         return latent
@@ -36,19 +41,28 @@ class Decoder(nn.Module):
         super().__init__()
         
         self.decode = nn.Sequential(
-            nn.ConvTranspose1d(in_channels=2,out_channels=128,kernel_size=3, stride=2, padding=0),
+            nn.ConvTranspose1d(in_channels=1,out_channels=128, kernel_size=4, stride=2, padding=0),
             nn.ReLU(),
             nn.BatchNorm1d(128),
-            nn.ConvTranspose1d(in_channels=128,out_channels=128,kernel_size=3, stride=2, padding=0),
+            nn.ConvTranspose1d(in_channels=128,out_channels=128, kernel_size=4, stride=2, padding=0),
             nn.ReLU(),
             nn.BatchNorm1d(128),
-            nn.ConvTranspose1d(in_channels=128, out_channels=1, kernel_size=3, stride=1, padding=0),
+            nn.ConvTranspose1d(in_channels=128,out_channels=128,kernel_size=4, stride=2, padding=0),
+            nn.ReLU(),
+            nn.BatchNorm1d(128),
+            nn.ConvTranspose1d(in_channels=128,out_channels=128,kernel_size=3, stride=1, padding=0),
+            nn.ReLU(),
+            nn.BatchNorm1d(128),
+            nn.ConvTranspose1d(in_channels=128,out_channels=128,kernel_size=2, stride=3, padding=0),
+            nn.ReLU(),
+            nn.BatchNorm1d(128),
+            nn.ConvTranspose1d(in_channels=128, out_channels=1, kernel_size=2, stride=1, padding=0),
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = self.decode(x)
         x = x.permute(0,2,1)
-        return x[:, :192 :,]
+        return x
 
 
 class ReconstructionLoss:
