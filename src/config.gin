@@ -3,23 +3,23 @@ import gin.torch.external_configurables
 Encoder.config = {
     "lstm_layers" : 3,
     "input" : 192,
-    "h1" : 32,
+    "h1" : 128,
     "h2" : 16,
     "h3" : 8,
     "h4" : 4,
     "dropout" : 0.3,
-    "latent" : 2
+    "latent" : 32
 }
 
 Decoder.config = {
     "lstm_layers" : 3,
     "input" : 192,
-    "h1" : 32,
+    "h1" : 128,
     "h2" : 16,
     "h3" : 8,
     "h4" : 4,
     "dropout" : 0.3,
-    "latent" : 2
+    "latent" : 32
 }
 
 

@@ -12,26 +12,20 @@ class Encoder(nn.Module):
     def __init__(self, config: Dict) -> None:
         super().__init__()
         self.encode = nn.Sequential(
-            nn.LSTM(config["input"], config["h1"], num_layers=config["lstm_layers"], batch_first=True),
-            # nn.Linear(config["input"], config["h1"]),
-            nn.MultiheadAttention(
-            embed_dim=config["h1"],
-            num_heads=4,
-            dropout=config["dropout"],
-            batch_first=True),
-            nn.Linear(config["h1"], config["h2"]),
-            nn.Dropout(config["dropout"]),
+            nn.Conv1d(in_channels=1, out_channels=128, kernel_size=3, stride=1, padding=1),
             nn.ReLU(),
-            nn.Linear(config["h2"], config["h3"]),
-            nn.Dropout(config["dropout"]),
+            nn.BatchNorm1d(128),
+            nn.MaxPool1d(kernel_size=2, stride=2, padding=0),
+            nn.Conv1d(in_channels=128, out_channels=128, kernel_size=3, stride=1, padding=1),
             nn.ReLU(),
-            nn.Linear(config["h3"], config["h4"]),
-            nn.Dropout(config["dropout"]),
-            nn.ReLU(),
-            nn.Linear(config["h2"], config["latent"]),
+            nn.BatchNorm1d(128),
+            nn.MaxPool1d(kernel_size=2, stride=2, padding=0),
+            nn.Conv1d(in_channels=128, out_channels=2, kernel_size=3, stride=1, padding=1),
         )
-
+        
     def forward(self, x: torch.Tensor) -> torch.Tensor:
+        # print(x.shape)
+        x = x.permute(0,2,1)
         latent = self.encode(x)
         return latent
 
@@ -40,29 +34,21 @@ class Encoder(nn.Module):
 class Decoder(nn.Module):
     def __init__(self, config: Dict) -> None:
         super().__init__()
+        
         self.decode = nn.Sequential(
-            nn.Linear(config["latent"], config["h2"]),
+            nn.ConvTranspose1d(in_channels=2,out_channels=128,kernel_size=3, stride=2, padding=0),
             nn.ReLU(),
-            nn.Linear(config["h4"], config["h3"]),
-            nn.Dropout(config["dropout"]),
+            nn.BatchNorm1d(128),
+            nn.ConvTranspose1d(in_channels=128,out_channels=128,kernel_size=3, stride=2, padding=0),
             nn.ReLU(),
-            nn.Linear(config["h3"], config["h2"]),
-            nn.Dropout(config["dropout"]),
-            nn.ReLU(),
-            nn.Linear(config["h2"], config["h1"]),
-            nn.Dropout(config["dropout"]),
-            nn.MultiheadAttention(
-            embed_dim=config["h1"],
-            num_heads=4,
-            dropout=config["dropout"],
-            batch_first=True),
-            nn.LSTM(config["input"], config["h1"], num_layers=config["lstm_layers"], batch_first=True),
-            # nn.Linear(config["h1"], config["input"]),
+            nn.BatchNorm1d(128),
+            nn.ConvTranspose1d(in_channels=128, out_channels=1, kernel_size=3, stride=1, padding=0),
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = self.decode(x)
-        return x
+        x = x.permute(0,2,1)
+        return x[:, :192 :,]
 
 
 class ReconstructionLoss:

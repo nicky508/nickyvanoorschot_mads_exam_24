@@ -16,7 +16,7 @@ class VAEstreamer(BaseDatastreamer):
             X = torch.stack(X_)  # noqa N806
             
             # batch_size, sequence_length, feature_dim = X.size()
-            X = X.view(X.size(0), -1) 
+            # X = X.view(X.size(0), -1) 
             # print(X.shape)
             # and yield X, X
             yield X, X
