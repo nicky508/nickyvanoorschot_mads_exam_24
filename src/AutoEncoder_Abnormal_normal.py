@@ -36,11 +36,11 @@ def main():
     # validFileTotal <--- from testfileClass = Path('../data/heart_big_test.parq').resolve()
 
     # Remove outliers for training the VAE
-    traindatasetVAE = datasets.HeartDataset1D(trainfileVAE, target="target", outliersRemoval=True)
-    testdatasetVAE = datasets.HeartDataset1D(testfileVAE, target="target", outliersRemoval=True)
+    traindatasetVAE = datasets.HeartDataset2D(trainfileVAE, target="target", outliersRemoval=True)
+    testdatasetVAE = datasets.HeartDataset2D(testfileVAE, target="target", outliersRemoval=True)
     
     #  Keep outliers for validation and finding a appropriate reconstructionloss
-    validsdatasetVAE = datasets.HeartDataset1D(testfileVAE, target="target", outliersRemoval=False)
+    validsdatasetVAE = datasets.HeartDataset2D(testfileVAE, target="target", outliersRemoval=False)
     
     trainstreamerVAE = VAEstreamer(traindatasetVAE, batchsize=32).stream()
     teststreamerVAE = VAEstreamer(testdatasetVAE, batchsize=32).stream()
@@ -69,6 +69,7 @@ def main():
         logdir="logs",
         train_steps=200,
         valid_steps=200,
+        optimizer_kwargs = {"lr": 1e-2},
         reporttypes=[ReportTypes.TENSORBOARD],
         scheduler_kwargs={"factor": 0.5, "patience": 10},
     )

@@ -15,7 +15,7 @@ class HeartDataset2D:
     ) -> None:
         self.df = pd.read_parquet(path)
         
-         #remove abnormal heart (y == 1)
+         #remove abnormal heartsamples (y == 1)
         if(outliersRemoval):
             self.df = self.df[self.df.target != 1.]
             
@@ -56,7 +56,7 @@ class HeartDataset1D:
     ) -> None:
         self.df = pd.read_parquet(path)
         
-        #remove abnormal heart (y == 1)
+        #remove abnormal heartsamples (y == 1)
         if(outliersRemoval):
             self.df = self.df[self.df.target != 1.]
             
