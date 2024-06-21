@@ -12,13 +12,21 @@ class Encoder(nn.Module):
     def __init__(self, config: Dict) -> None:
         super().__init__()
         self.encode = nn.Sequential(
-            nn.Linear(config["input"], config["h1"]),
-            nn.ReLU(),
+            nn.LSTM(config["input"], config["h1"], num_layers=config["lstm_layers"], batch_first=True),
+            # nn.Linear(config["input"], config["h1"]),
+            nn.MultiheadAttention(
+            embed_dim=config["h1"],
+            num_heads=4,
+            dropout=config["dropout"],
+            batch_first=True),
             nn.Linear(config["h1"], config["h2"]),
+            nn.Dropout(config["dropout"]),
             nn.ReLU(),
             nn.Linear(config["h2"], config["h3"]),
+            nn.Dropout(config["dropout"]),
             nn.ReLU(),
             nn.Linear(config["h3"], config["h4"]),
+            nn.Dropout(config["dropout"]),
             nn.ReLU(),
             nn.Linear(config["h2"], config["latent"]),
         )
@@ -36,12 +44,20 @@ class Decoder(nn.Module):
             nn.Linear(config["latent"], config["h2"]),
             nn.ReLU(),
             nn.Linear(config["h4"], config["h3"]),
+            nn.Dropout(config["dropout"]),
             nn.ReLU(),
             nn.Linear(config["h3"], config["h2"]),
+            nn.Dropout(config["dropout"]),
             nn.ReLU(),
             nn.Linear(config["h2"], config["h1"]),
-            nn.ReLU(),
-            nn.Linear(config["h1"], config["input"]),
+            nn.Dropout(config["dropout"]),
+            nn.MultiheadAttention(
+            embed_dim=config["h1"],
+            num_heads=4,
+            dropout=config["dropout"],
+            batch_first=True),
+            nn.LSTM(config["input"], config["h1"], num_layers=config["lstm_layers"], batch_first=True),
+            # nn.Linear(config["h1"], config["input"]),
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:

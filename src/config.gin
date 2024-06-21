@@ -1,21 +1,25 @@
 import gin.torch.external_configurables
 
 Encoder.config = {
+    "lstm_layers" : 3,
     "input" : 192,
-    "h1" : 128,
-    "h2" : 64,
-    "h3" : 32,
-    "h4" : 16,
-    "latent" : 1
+    "h1" : 32,
+    "h2" : 16,
+    "h3" : 8,
+    "h4" : 4,
+    "dropout" : 0.3,
+    "latent" : 2
 }
 
 Decoder.config = {
+    "lstm_layers" : 3,
     "input" : 192,
-    "h1" : 128,
-    "h2" : 64,
-    "h3" : 32,
-    "h4" : 16,
-    "latent" : 1
+    "h1" : 32,
+    "h2" : 16,
+    "h3" : 8,
+    "h4" : 4,
+    "dropout" : 0.3,
+    "latent" : 2
 }
 
 

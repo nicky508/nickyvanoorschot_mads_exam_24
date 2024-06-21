@@ -4,14 +4,21 @@ import pandas as pd
 import torch
 
 
+#Adjusted the dataset, for VAE (removing the abnormal heartsignals)
 class HeartDataset2D:
     def __init__(
         self,
         path: Path,
         target: str,
         shape: tuple[int, int] = (16, 12),
+        outliersRemoval: bool = False, 
     ) -> None:
         self.df = pd.read_parquet(path)
+        
+         #remove abnormal heart (y == 1)
+        if(outliersRemoval):
+            self.df = self.df[self.df.target != 1.]
+            
         self.target = target
         _x = self.df.drop("target", axis=1)
         x = torch.tensor(_x.values, dtype=torch.float32)
@@ -52,7 +59,7 @@ class HeartDataset1D:
         #remove abnormal heart (y == 1)
         if(outliersRemoval):
             self.df = self.df[self.df.target != 1.]
-        
+            
         self.target = target
         _x = self.df.drop("target", axis=1)
         x = torch.tensor(_x.values, dtype=torch.float32)

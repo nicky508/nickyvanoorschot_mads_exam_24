@@ -561,3 +561,7 @@
 2024-06-20 11:28:32.089 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.9505, current loss 0.9553.Counter 8/10.
 2024-06-20 11:28:34.430 | INFO     | mltrainer.trainer:report:191 - Epoch 99 train 0.7952 test 0.9442 metric ['0.9442']
 2024-06-20 11:28:34.438 | SUCCESS  | __main__:main:95 - finished autoencode.py
+2024-06-20 17:37:06.019 | INFO     | __main__:main:24 - starting exam.py
+2024-06-20 17:37:31.786 | INFO     | __main__:main:24 - starting exam.py
+2024-06-20 17:37:54.457 | INFO     | __main__:main:24 - starting exam.py
+2024-06-20 17:38:39.739 | INFO     | __main__:main:24 - starting exam.py
