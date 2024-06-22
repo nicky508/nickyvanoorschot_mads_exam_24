@@ -1,6 +1,5 @@
 from pathlib import Path
 from typing import Dict
-
 import ray
 import torch
 from filelock import FileLock
@@ -18,11 +17,11 @@ from sklearn.metrics import confusion_matrix
 from torch import nn
 from mads_datasets.base import BaseDatastreamer
 from mltrainer.preprocessors import BasePreprocessor
-
+import metrics, datasets
 
 import sys
-sys.path.append('../')
-from src import datasets, metrics
+# sys.path.append('../')
+# from src import datasets, metrics
 
 SAMPLE_INT = tune.search.sample.Integer
 SAMPLE_FLOAT = tune.search.sample.Float
@@ -35,36 +34,38 @@ class Accuracy:
         return (np.argmax(yhat, axis=1) == y).sum() / len(yhat)
 
 class ConvBlock(nn.Module):
-    def __init__(self, in_channels, out_channels):
+    def __init__(self, in_channels, out_channels, dropout):
         super().__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(in_channels, out_channels, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(out_channels),
             nn.ReLU(),
-            nn.Dropout(p=0.3),
+            nn.Dropout(p=dropout),
             nn.Conv2d(out_channels, out_channels, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(out_channels),
             nn.ReLU(),
         )
         
-        self.normalization = nn.LayerNorm(out_channels)
+        self.normalization = None
         
     def forward(self, x):
         identity = x.clone()
         x = self.conv(x)
+        self.normalization = nn.LayerNorm([x.size(2), x.size(3)])
         x = self.normalization(x + identity)
-        return 
+        return x
     
 class CNN(nn.Module):
     def __init__(self, config: dict) -> None:
         super().__init__()
         hidden = config['hidden']
+        dropout = config['dropout']
         self.convolutions = nn.ModuleList([
-            ConvBlock(1, hidden),
+            ConvBlock(1, hidden, dropout),
         ])
 
         for i in range(config['num_layers']):
-            self.convolutions.extend([ConvBlock(hidden, hidden), nn.ReLU()])
+            self.convolutions.extend([ConvBlock(hidden, hidden, dropout), nn.ReLU()])
         self.convolutions.append(nn.MaxPool2d(2, 2))
 
         self.dense = nn.Sequential(
@@ -81,8 +82,9 @@ class CNN(nn.Module):
         return x
 
 def train(config: Dict):
-    trainfile = Path('../data/heart_train.parq').resolve()
-    testfile = Path('../data/heart_test.parq').resolve()
+    trainfile = data_dir / 'heart_train.parq'
+    testfile = data_dir / 'heart_test.parq'
+    print(trainfile)
     
     f1micro = metrics.F1Score(average='micro')
     f1macro = metrics.F1Score(average='macro')
@@ -93,7 +95,7 @@ def train(config: Dict):
     shape = (16, 12)
     traindataset = datasets.HeartDataset2D(trainfile, target="target", shape=shape)
     testdataset = datasets.HeartDataset2D(testfile, target="target", shape=shape)
-    traindataset, testdataset
+    
     if torch.backends.mps.is_available() and torch.backends.mps.is_built():
         device = torch.device("mps")
         print("Using MPS")
@@ -159,25 +161,27 @@ def train(config: Dict):
 if __name__ == "__main__":
     ray.init()
 
-    data_dir = Path("data/raw/heartbeates/heart_dataset").resolve()
+    data_dir = Path("./data").resolve()
     if not data_dir.exists():
         data_dir.mkdir(parents=True)
         logger.info(f"Created {data_dir}")
-    tune_dir = Path("models/ray").resolve()
+    tune_dir = Path("./models/ray").resolve()
 
     config = {
         "num_classes": 2,
         "tune_dir": tune_dir,
         "data_dir": data_dir,
-        "hidden": tune.sample_from(lambda _: 2**np.random.randint(2, 9)),
-        "dropout": tune.choice([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]),
-        "num_layers": tune.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
+        "dropout": tune.choice([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]),
+        "hidden": tune.sample_from(lambda _: 2**np.random.randint(3, 9)),
+        'num_layers': tune.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
         "batch_size": tune.sample_from(lambda _: 2**np.random.randint(2, 9)),
     }
 
     reporter = CLIReporter()
     reporter.add_metric_column("Accuracy")
-
+    reporter.add_metric_column("Recall")
+    reporter.add_metric_column("Precision")
+    
     bohb_hyperband = HyperBandForBOHB(
         time_attr="training_iteration",
         max_t=50,
@@ -190,7 +194,7 @@ if __name__ == "__main__":
     analysis = tune.run(
         train,
         config=config,
-        metric="test_loss",
+        metric="loss",
         mode="min",
         progress_reporter=reporter,
         local_dir=str(config["tune_dir"]),
