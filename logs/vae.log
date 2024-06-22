@@ -1568,3 +1568,133 @@
 2024-06-21 15:52:56.649 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240621-155256
 2024-06-21 15:52:57.118 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
 2024-06-21 15:53:00.879 | INFO     | mltrainer.trainer:report:191 - Epoch 0 train 0.0816 test 0.0183 metric ['0.0183']
+2024-06-21 22:37:57.295 | INFO     | __main__:main:24 - starting exam.py
+2024-06-21 22:37:57.619 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 7, 5])
+2024-06-21 22:38:18.416 | INFO     | __main__:main:24 - starting exam.py
+2024-06-21 22:38:18.614 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 7, 5])
+2024-06-21 22:38:18.618 | INFO     | __main__:main:57 - the shape after: torch.Size([32, 1, 16, 12])
+2024-06-21 22:38:18.633 | INFO     | __main__:main:61 - Untrained loss: 1.4723161458969116
+2024-06-21 22:38:18.633 | INFO     | __main__:main:63 - starting training for 100 epochs
+2024-06-21 22:38:18.636 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240621-223818
+2024-06-21 22:38:19.116 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-21 22:38:20.944 | INFO     | mltrainer.trainer:report:191 - Epoch 0 train 0.3017 test 0.0238 metric ['0.0238']
+2024-06-21 22:38:22.800 | INFO     | mltrainer.trainer:report:191 - Epoch 1 train 0.0526 test 0.0210 metric ['0.0210']
+2024-06-21 22:38:24.687 | INFO     | mltrainer.trainer:report:191 - Epoch 2 train 0.0234 test 0.0186 metric ['0.0186']
+2024-06-21 22:38:26.585 | INFO     | mltrainer.trainer:report:191 - Epoch 3 train 0.0180 test 0.0172 metric ['0.0172']
+2024-06-21 22:38:28.455 | INFO     | mltrainer.trainer:report:191 - Epoch 4 train 0.0162 test 0.0167 metric ['0.0167']
+2024-06-21 22:41:42.116 | INFO     | __main__:main:24 - starting exam.py
+2024-06-21 22:41:42.317 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1])
+2024-06-21 22:41:42.321 | INFO     | __main__:main:57 - the shape after: torch.Size([32, 1, 16, 12])
+2024-06-21 22:41:42.322 | INFO     | __main__:main:61 - Untrained loss: 1.6059437990188599
+2024-06-21 22:41:42.322 | INFO     | __main__:main:63 - starting training for 100 epochs
+2024-06-21 22:41:42.326 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240621-224142
+2024-06-21 22:41:42.796 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-21 22:41:44.900 | INFO     | mltrainer.trainer:report:191 - Epoch 0 train 0.4023 test 0.0296 metric ['0.0296']
+2024-06-21 22:41:47.067 | INFO     | mltrainer.trainer:report:191 - Epoch 1 train 0.0648 test 0.0236 metric ['0.0236']
+2024-06-21 22:42:22.905 | INFO     | __main__:main:24 - starting exam.py
+2024-06-22 17:48:33.118 | INFO     | __main__:main:24 - starting exam.py
+2024-06-22 17:48:34.511 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 7, 5])
+2024-06-22 17:48:34.570 | INFO     | __main__:main:57 - the shape after: torch.Size([32, 1, 16, 12])
+2024-06-22 17:48:34.614 | INFO     | __main__:main:61 - Untrained loss: 3.416046380996704
+2024-06-22 17:48:34.614 | INFO     | __main__:main:63 - starting training for 100 epochs
+2024-06-22 17:48:34.618 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240622-174834
+2024-06-22 17:48:35.509 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-22 17:48:38.913 | INFO     | mltrainer.trainer:report:191 - Epoch 0 train 0.7541 test 0.0249 metric ['0.0249']
+2024-06-22 17:48:42.083 | INFO     | mltrainer.trainer:report:191 - Epoch 1 train 0.1445 test 0.0196 metric ['0.0196']
+2024-06-22 17:48:45.304 | INFO     | mltrainer.trainer:report:191 - Epoch 2 train 0.0443 test 0.0184 metric ['0.0184']
+2024-06-22 17:48:48.410 | INFO     | mltrainer.trainer:report:191 - Epoch 3 train 0.0248 test 0.0180 metric ['0.0180']
+2024-06-22 17:48:51.616 | INFO     | mltrainer.trainer:report:191 - Epoch 4 train 0.0207 test 0.0173 metric ['0.0173']
+2024-06-22 17:48:54.821 | INFO     | mltrainer.trainer:report:191 - Epoch 5 train 0.0193 test 0.0171 metric ['0.0171']
+2024-06-22 17:48:57.978 | INFO     | mltrainer.trainer:report:191 - Epoch 6 train 0.0185 test 0.0162 metric ['0.0162']
+2024-06-22 17:49:01.214 | INFO     | mltrainer.trainer:report:191 - Epoch 7 train 0.0176 test 0.0157 metric ['0.0157']
+2024-06-22 17:49:04.460 | INFO     | mltrainer.trainer:report:191 - Epoch 8 train 0.0169 test 0.0150 metric ['0.0150']
+2024-06-22 17:49:07.724 | INFO     | mltrainer.trainer:report:191 - Epoch 9 train 0.0163 test 0.0154 metric ['0.0154']
+2024-06-22 17:49:07.725 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0150, current loss 0.0154.Counter 1/10.
+2024-06-22 17:49:11.019 | INFO     | mltrainer.trainer:report:191 - Epoch 10 train 0.0158 test 0.0141 metric ['0.0141']
+2024-06-22 17:49:14.374 | INFO     | mltrainer.trainer:report:191 - Epoch 11 train 0.0153 test 0.0144 metric ['0.0144']
+2024-06-22 17:49:14.375 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0141, current loss 0.0144.Counter 1/10.
+2024-06-22 17:49:17.470 | INFO     | mltrainer.trainer:report:191 - Epoch 12 train 0.0147 test 0.0137 metric ['0.0137']
+2024-06-22 17:49:20.589 | INFO     | mltrainer.trainer:report:191 - Epoch 13 train 0.0143 test 0.0137 metric ['0.0137']
+2024-06-22 17:49:20.589 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0137, current loss 0.0137.Counter 1/10.
+2024-06-22 17:49:23.737 | INFO     | mltrainer.trainer:report:191 - Epoch 14 train 0.0136 test 0.0129 metric ['0.0129']
+2024-06-22 17:49:26.858 | INFO     | mltrainer.trainer:report:191 - Epoch 15 train 0.0131 test 0.0128 metric ['0.0128']
+2024-06-22 17:49:29.961 | INFO     | mltrainer.trainer:report:191 - Epoch 16 train 0.0128 test 0.0122 metric ['0.0122']
+2024-06-22 17:49:33.065 | INFO     | mltrainer.trainer:report:191 - Epoch 17 train 0.0123 test 0.0120 metric ['0.0120']
+2024-06-22 17:49:36.198 | INFO     | mltrainer.trainer:report:191 - Epoch 18 train 0.0119 test 0.0115 metric ['0.0115']
+2024-06-22 17:49:39.466 | INFO     | mltrainer.trainer:report:191 - Epoch 19 train 0.0115 test 0.0112 metric ['0.0112']
+2024-06-22 17:49:42.598 | INFO     | mltrainer.trainer:report:191 - Epoch 20 train 0.0112 test 0.0100 metric ['0.0100']
+2024-06-22 17:49:45.958 | INFO     | mltrainer.trainer:report:191 - Epoch 21 train 0.0107 test 0.0094 metric ['0.0094']
+2024-06-22 17:49:48.980 | INFO     | mltrainer.trainer:report:191 - Epoch 22 train 0.0106 test 0.0101 metric ['0.0101']
+2024-06-22 17:49:48.981 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0094, current loss 0.0101.Counter 1/10.
+2024-06-22 17:49:52.147 | INFO     | mltrainer.trainer:report:191 - Epoch 23 train 0.0102 test 0.0096 metric ['0.0096']
+2024-06-22 17:49:52.147 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0094, current loss 0.0096.Counter 2/10.
+2024-06-22 17:49:55.231 | INFO     | mltrainer.trainer:report:191 - Epoch 24 train 0.0102 test 0.0091 metric ['0.0091']
+2024-06-22 17:49:58.366 | INFO     | mltrainer.trainer:report:191 - Epoch 25 train 0.0099 test 0.0090 metric ['0.0090']
+2024-06-22 17:50:01.506 | INFO     | mltrainer.trainer:report:191 - Epoch 26 train 0.0097 test 0.0091 metric ['0.0091']
+2024-06-22 17:50:01.507 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0090, current loss 0.0091.Counter 1/10.
+2024-06-22 17:50:04.588 | INFO     | mltrainer.trainer:report:191 - Epoch 27 train 0.0095 test 0.0085 metric ['0.0085']
+2024-06-22 17:50:07.755 | INFO     | mltrainer.trainer:report:191 - Epoch 28 train 0.0094 test 0.0087 metric ['0.0087']
+2024-06-22 17:50:07.756 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0085, current loss 0.0087.Counter 1/10.
+2024-06-22 17:50:10.862 | INFO     | mltrainer.trainer:report:191 - Epoch 29 train 0.0091 test 0.0089 metric ['0.0089']
+2024-06-22 17:50:10.863 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0085, current loss 0.0089.Counter 2/10.
+2024-06-22 17:50:14.117 | INFO     | mltrainer.trainer:report:191 - Epoch 30 train 0.0090 test 0.0086 metric ['0.0086']
+2024-06-22 17:50:14.117 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0085, current loss 0.0086.Counter 3/10.
+2024-06-22 17:50:17.184 | INFO     | mltrainer.trainer:report:191 - Epoch 31 train 0.0089 test 0.0088 metric ['0.0088']
+2024-06-22 17:50:17.185 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0085, current loss 0.0088.Counter 4/10.
+2024-06-22 17:50:20.406 | INFO     | mltrainer.trainer:report:191 - Epoch 32 train 0.0086 test 0.0083 metric ['0.0083']
+2024-06-22 17:50:23.468 | INFO     | mltrainer.trainer:report:191 - Epoch 33 train 0.0086 test 0.0083 metric ['0.0083']
+2024-06-22 17:50:23.468 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0083, current loss 0.0083.Counter 1/10.
+2024-06-22 17:50:26.616 | INFO     | mltrainer.trainer:report:191 - Epoch 34 train 0.0084 test 0.0078 metric ['0.0078']
+2024-06-22 17:50:29.757 | INFO     | mltrainer.trainer:report:191 - Epoch 35 train 0.0084 test 0.0084 metric ['0.0084']
+2024-06-22 17:50:29.757 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0078, current loss 0.0084.Counter 1/10.
+2024-06-22 17:50:32.816 | INFO     | mltrainer.trainer:report:191 - Epoch 36 train 0.0083 test 0.0079 metric ['0.0079']
+2024-06-22 17:50:32.816 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0078, current loss 0.0079.Counter 2/10.
+2024-06-22 17:50:35.943 | INFO     | mltrainer.trainer:report:191 - Epoch 37 train 0.0081 test 0.0090 metric ['0.0090']
+2024-06-22 17:50:35.943 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0078, current loss 0.0090.Counter 3/10.
+2024-06-22 17:50:39.063 | INFO     | mltrainer.trainer:report:191 - Epoch 38 train 0.0082 test 0.0078 metric ['0.0078']
+2024-06-22 17:50:39.064 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0078, current loss 0.0078.Counter 4/10.
+2024-06-22 17:50:42.172 | INFO     | mltrainer.trainer:report:191 - Epoch 39 train 0.0080 test 0.0075 metric ['0.0075']
+2024-06-22 17:50:45.300 | INFO     | mltrainer.trainer:report:191 - Epoch 40 train 0.0080 test 0.0084 metric ['0.0084']
+2024-06-22 17:50:45.301 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0075, current loss 0.0084.Counter 1/10.
+2024-06-22 17:50:48.354 | INFO     | mltrainer.trainer:report:191 - Epoch 41 train 0.0079 test 0.0088 metric ['0.0088']
+2024-06-22 17:50:48.355 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0075, current loss 0.0088.Counter 2/10.
+2024-06-22 17:50:51.505 | INFO     | mltrainer.trainer:report:191 - Epoch 42 train 0.0078 test 0.0075 metric ['0.0075']
+2024-06-22 17:50:51.505 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0075, current loss 0.0075.Counter 3/10.
+2024-06-22 17:50:54.672 | INFO     | mltrainer.trainer:report:191 - Epoch 43 train 0.0078 test 0.0088 metric ['0.0088']
+2024-06-22 17:50:54.673 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0075, current loss 0.0088.Counter 4/10.
+2024-06-22 17:50:57.720 | INFO     | mltrainer.trainer:report:191 - Epoch 44 train 0.0079 test 0.0083 metric ['0.0083']
+2024-06-22 17:50:57.720 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0075, current loss 0.0083.Counter 5/10.
+2024-06-22 17:51:00.864 | INFO     | mltrainer.trainer:report:191 - Epoch 45 train 0.0078 test 0.0074 metric ['0.0074']
+2024-06-22 17:51:04.033 | INFO     | mltrainer.trainer:report:191 - Epoch 46 train 0.0076 test 0.0078 metric ['0.0078']
+2024-06-22 17:51:04.034 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0074, current loss 0.0078.Counter 1/10.
+2024-06-22 17:51:10.502 | INFO     | mltrainer.trainer:report:191 - Epoch 47 train 0.0076 test 0.0080 metric ['0.0080']
+2024-06-22 17:51:10.503 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0074, current loss 0.0080.Counter 2/10.
+2024-06-22 17:51:24.962 | INFO     | mltrainer.trainer:report:191 - Epoch 48 train 0.0076 test 0.0078 metric ['0.0078']
+2024-06-22 17:51:24.963 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0074, current loss 0.0078.Counter 3/10.
+2024-06-22 17:51:30.711 | INFO     | mltrainer.trainer:report:191 - Epoch 49 train 0.0076 test 0.0071 metric ['0.0071']
+2024-06-22 17:51:34.955 | INFO     | mltrainer.trainer:report:191 - Epoch 50 train 0.0075 test 0.0075 metric ['0.0075']
+2024-06-22 17:51:34.955 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0071, current loss 0.0075.Counter 1/10.
+2024-06-22 17:51:38.155 | INFO     | mltrainer.trainer:report:191 - Epoch 51 train 0.0075 test 0.0067 metric ['0.0067']
+2024-06-22 17:51:41.354 | INFO     | mltrainer.trainer:report:191 - Epoch 52 train 0.0075 test 0.0076 metric ['0.0076']
+2024-06-22 17:51:41.354 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0076.Counter 1/10.
+2024-06-22 17:51:44.513 | INFO     | mltrainer.trainer:report:191 - Epoch 53 train 0.0074 test 0.0078 metric ['0.0078']
+2024-06-22 17:51:44.514 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0078.Counter 2/10.
+2024-06-22 17:51:47.811 | INFO     | mltrainer.trainer:report:191 - Epoch 54 train 0.0074 test 0.0088 metric ['0.0088']
+2024-06-22 17:51:47.812 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0088.Counter 3/10.
+2024-06-22 17:51:51.089 | INFO     | mltrainer.trainer:report:191 - Epoch 55 train 0.0074 test 0.0087 metric ['0.0087']
+2024-06-22 17:51:51.090 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0087.Counter 4/10.
+2024-06-22 17:51:54.427 | INFO     | mltrainer.trainer:report:191 - Epoch 56 train 0.0075 test 0.0076 metric ['0.0076']
+2024-06-22 17:51:54.428 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0076.Counter 5/10.
+2024-06-22 17:51:57.708 | INFO     | mltrainer.trainer:report:191 - Epoch 57 train 0.0072 test 0.0069 metric ['0.0069']
+2024-06-22 17:51:57.709 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0069.Counter 6/10.
+2024-06-22 17:52:01.100 | INFO     | mltrainer.trainer:report:191 - Epoch 58 train 0.0072 test 0.0069 metric ['0.0069']
+2024-06-22 17:52:01.101 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0069.Counter 7/10.
+2024-06-22 17:52:04.320 | INFO     | mltrainer.trainer:report:191 - Epoch 59 train 0.0073 test 0.0073 metric ['0.0073']
+2024-06-22 17:52:04.321 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0073.Counter 8/10.
+2024-06-22 17:52:07.557 | INFO     | mltrainer.trainer:report:191 - Epoch 60 train 0.0073 test 0.0081 metric ['0.0081']
+2024-06-22 17:52:07.558 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0081.Counter 9/10.
+2024-06-22 17:52:11.139 | INFO     | mltrainer.trainer:report:191 - Epoch 61 train 0.0073 test 0.0087 metric ['0.0087']
+2024-06-22 17:52:11.140 | INFO     | mltrainer.trainer:__call__:234 - best loss: 0.0067, current loss 0.0087.Counter 10/10.
+2024-06-22 17:52:11.140 | INFO     | mltrainer.trainer:loop:98 - Interrupting loop due to early stopping patience.
+2024-06-22 17:52:11.141 | INFO     | mltrainer.trainer:loop:104 - early_stopping_save was false, using latest model.Set to true to retrieve best model.
+2024-06-22 17:52:11.147 | SUCCESS  | __main__:main:96 - finished autoencode.py

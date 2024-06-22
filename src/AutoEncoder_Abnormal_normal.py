@@ -69,7 +69,7 @@ def main():
         logdir="logs",
         train_steps=200,
         valid_steps=200,
-        optimizer_kwargs = {"lr": 1e-2},
+        # optimizer_kwargs = {"lr": 1e-2},
         reporttypes=[ReportTypes.TENSORBOARD],
         scheduler_kwargs={"factor": 0.5, "patience": 10},
     )
