@@ -1,102 +1,110 @@
-from mads_datasets.base import BaseDatastreamer
-from mltrainer.preprocessors import BasePreprocessor
-import matplotlib.pyplot as plt
-from pathlib import Path
-import pandas as pd
-import seaborn as sns
-from sklearn.metrics import confusion_matrix
-from torch import nn
+from typing import Dict
+
+import numpy as np
 import torch
-import gin
-from streamer import VAEstreamer
-import rae_model
-from loguru import logger
+from torch import nn
 
-import sys
-import datasets, metrics
-import mltrainer
-from mltrainer import ReportTypes, Trainer, TrainerSettings
-mltrainer.__version__
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-logger.add("logs/vae.log")
-
-def main():
-    logger.info("starting exam.py")
-    # gin.parse_config_file(Path(__file__).parent / 'config.gin')
+#Encoder is 2 separate layers of the LSTM RNN 
+class Encoder(nn.Module):
+    def __init__(self, seq_len=192, n_features=1, embedding_dim=64):
+        super(Encoder, self).__init__()
+        self.seq_len, self.n_features = seq_len, n_features
+        self.embedding_dim, self.hidden_dim = embedding_dim, 2 * embedding_dim
+        
+        self.rnn1 = nn.LSTM(
+            input_size=n_features,
+            hidden_size=self.hidden_dim,
+            num_layers=1,
+            batch_first=True
+        )
     
-    # use the binary data for training the Variational Autoencoder
-    trainfileVAE = Path('./data/heart_train.parq').resolve()
-    testfileVAE = Path('./data/heart_test.parq').resolve()
+    # Initializing the hidden numbers of layers
+        self.rnn2 = nn.LSTM(
+            input_size=self.hidden_dim,
+            hidden_size=embedding_dim,
+            num_layers=1,
+            batch_first=True
+        )
+        
+    def forward(self, x):
+        # Pass through the first LSTM layer
+        x, _ = self.rnn1(x)
+        
+        # Pass through the second LSTM layer
+        x, (hidden_n, _) = self.rnn2(x)
+        
+        # Return the output of the second LSTM layer
+        return x
 
-    # use the big dataset for training the classification model
-    trainfileClass = Path('./data/heart_big_train.parq').resolve()
-    testfileClass = Path('./data/heart_big_test.parq').resolve()
 
-    # use the valid dataset (20% from the testfile) for validation of the ensembled models
-    # validFileTotal <--- from testfileClass = Path('../data/heart_big_test.parq').resolve()
 
-    # Remove outliers for training the VAE
-    traindatasetVAE = datasets.HeartDataset1D(trainfileVAE, target="target", outliersRemoval=True)
-    testdatasetVAE = datasets.HeartDataset1D(testfileVAE, target="target", outliersRemoval=True)
+class Decoder(nn.Module):
+    def __init__(self, seq_len=192, input_dim=64, n_features=1):
+        super(Decoder, self).__init__()
+        
+        self.seq_len = seq_len
+        self.input_dim = input_dim
+        self.n_features = n_features
+        
+        # Calculate hidden dimension
+        self.hidden_dim = 2 * input_dim
+        
+        # Define LSTM layers
+        self.rnn1 = nn.LSTM(
+            input_size=input_dim,  # Ensure input_size matches input_dim
+            hidden_size=self.hidden_dim,
+            num_layers=1,
+            batch_first=True
+        )
+        
+        self.rnn2 = nn.LSTM(
+            input_size=self.hidden_dim,
+            hidden_size=self.hidden_dim,
+            num_layers=1,
+            batch_first=True
+        )
+        
+        # Output layer
+        self.output_layer = nn.Linear(self.hidden_dim, n_features)
+        
+    def forward(self, x):
+        # Pass through the first LSTM layer
+        x, _ = self.rnn1(x)
+        
+        # Pass through the second LSTM layer
+        x, _ = self.rnn2(x)
+        
+        # Apply the output layer to each time step
+        x = self.output_layer(x)
+        
+        return x
+
+
+class RecurrentAutoencoder(nn.Module):
+    def __init__(self, seq_len=192, n_features=1, embedding_dim=64):
+        super(RecurrentAutoencoder, self).__init__()
+        
+        self.encoder = Encoder(seq_len, n_features, embedding_dim).to(device)
+        self.decoder = Decoder(seq_len, embedding_dim, n_features).to(device)
+        
+    def forward(self, x):
+        x = self.encoder(x)
+        x = self.decoder(x)
+        
+        return x
     
-    #  Keep outliers for validation and finding a appropriate reconstructionloss
-    validsdatasetVAE = datasets.HeartDataset1D(testfileVAE, target="target", outliersRemoval=False)
-    
-    trainstreamerVAE = VAEstreamer(traindatasetVAE, batchsize=32).stream()
-    teststreamerVAE = VAEstreamer(testdatasetVAE, batchsize=32).stream()
-
-    X1, X2 = next(trainstreamerVAE)
-
-    encoder = rae_model.Encoder()
-    decoder = rae_model.Decoder()
-
-    logger.info(f"the shape before : {X1.shape}")
-
-    latent = encoder(X1)
-    logger.info(f"the latent shape : {latent.shape}")
-
-    x = decoder(latent)
-    logger.info(f"the shape after: {x.shape}")
-
-    lossfn = rae_model.ReconstructionLoss()
-    loss = lossfn(X2, x)
-    logger.info(f"Untrained loss: {loss}")
-
-    logger.info(f"starting training for {100} epochs")
-    autoencoder = rae_model.RecurrentAutoencoder()
-    
-    settings = TrainerSettings(
-        epochs=100,
-        metrics=[lossfn],
-        logdir="logs",
-        train_steps=200,
-        valid_steps=200,
-        optimizer_kwargs = {"lr": 1e-3},
-        reporttypes=[ReportTypes.TENSORBOARD],
-        scheduler_kwargs={"factor": 0.5, "patience": 10},
-    )
-
-    trainer = Trainer(
-        model=autoencoder,
-        settings=settings,
-        loss_fn=lossfn,
-        optimizer=torch.optim.Adam,
-        traindataloader=trainstreamerVAE,
-        validdataloader=teststreamerVAE,
-        scheduler=torch.optim.lr_scheduler.ReduceLROnPlateau,
-    )
-    trainer.loop()
-    modeldir = Path("models")
-
-    if not modeldir.exists():
-        modeldir.mkdir(parents=True)
-
-    modelpath = modeldir / Path("vaemodel.pt")
-
-    torch.save(autoencoder, modelpath)
-
-    logger.success("finished autoencode.py")
-
-if __name__ == "__main__":
-    main()
-
+class ReconstructionLoss:
+    def __call__(self, y, yhat):
+        # Convert NumPy arrays to PyTorch tensors if necessary
+        if isinstance(y, np.ndarray):
+            y = torch.from_numpy(y)
+        if isinstance(yhat, np.ndarray):
+            yhat = torch.from_numpy(yhat)
+        
+        # Compute squared error
+        sqe = (y - yhat) ** 2
+        
+        summed = torch.sum(sqe, dim=1) 
+        return torch.mean(summed)

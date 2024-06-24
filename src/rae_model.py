@@ -8,7 +8,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 #Encoder is 2 separate layers of the LSTM RNN 
 class Encoder(nn.Module):
-    def __init__(self, seq_len=192, n_features=1, embedding_dim=32):
+    def __init__(self, seq_len=192, n_features=1, embedding_dim=16):
         super(Encoder, self).__init__()
         self.seq_len, self.n_features = seq_len, n_features
         self.embedding_dim, self.hidden_dim = embedding_dim, 2 * embedding_dim
@@ -41,7 +41,7 @@ class Encoder(nn.Module):
 
 
 class Decoder(nn.Module):
-    def __init__(self, seq_len=192, input_dim=32, n_features=1):
+    def __init__(self, seq_len=192, input_dim=16, n_features=1):
         super(Decoder, self).__init__()
         
         self.seq_len = seq_len
@@ -83,7 +83,7 @@ class Decoder(nn.Module):
 
 
 class RecurrentAutoencoder(nn.Module):
-    def __init__(self, seq_len=192, n_features=1, embedding_dim=32):
+    def __init__(self, seq_len=192, n_features=1, embedding_dim=16):
         super(RecurrentAutoencoder, self).__init__()
         
         self.encoder = Encoder(seq_len, n_features, embedding_dim).to(device)
