@@ -125,12 +125,12 @@ def train(config: Dict):
         optimizer = torch.optim.Adam
 
         settings = TrainerSettings(
-            epochs=10,
+            epochs=50,
             metrics=[recall, accuracy, f1micro, f1macro, precision],
             logdir="heart2D",
             train_steps=len(trainstreamer),
             valid_steps=len(teststreamer),
-            reporttypes=[ReportTypes.TENSORBOARD, ReportTypes.MLFLOW],
+            reporttypes=[ReportTypes.TENSORBOARD, ReportTypes.RAY, ReportTypes.MLFLOW],
             scheduler_kwargs=None,
             earlystop_kwargs=None
         )
@@ -171,16 +171,14 @@ if __name__ == "__main__":
         "num_classes": 2,
         "tune_dir": tune_dir,
         "data_dir": data_dir,
-        "dropout": tune.choice([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]),
-        "hidden": tune.sample_from(lambda _: 2**np.random.randint(3, 9)),
-        'num_layers': tune.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
-        "batch_size": tune.sample_from(lambda _: 2**np.random.randint(2, 9)),
+        "dropout": tune.choice([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]),
+        "hidden": tune.sample_from(lambda _: 2**np.random.randint(3, 7)),
+        'num_layers': tune.choice([1, 2, 3, 4, 5, 6, 7]),
+        "batch_size": tune.sample_from(lambda _: 2**np.random.randint(2, 8)),
     }
 
     reporter = CLIReporter()
     reporter.add_metric_column("Accuracy")
-    reporter.add_metric_column("Recall")
-    reporter.add_metric_column("Precision")
     
     bohb_hyperband = HyperBandForBOHB(
         time_attr="training_iteration",
@@ -194,7 +192,7 @@ if __name__ == "__main__":
     analysis = tune.run(
         train,
         config=config,
-        metric="loss",
+        metric="test_loss",
         mode="min",
         progress_reporter=reporter,
         local_dir=str(config["tune_dir"]),

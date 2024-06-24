@@ -1698,3 +1698,628 @@
 2024-06-22 17:52:11.140 | INFO     | mltrainer.trainer:loop:98 - Interrupting loop due to early stopping patience.
 2024-06-22 17:52:11.141 | INFO     | mltrainer.trainer:loop:104 - early_stopping_save was false, using latest model.Set to true to retrieve best model.
 2024-06-22 17:52:11.147 | SUCCESS  | __main__:main:96 - finished autoencode.py
+2024-06-23 20:35:16.294 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:35:34.761 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:35:57.268 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:36:27.612 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:37:13.265 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:37:35.345 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:38:01.505 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:38:15.094 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:38:31.123 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:40:01.855 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:40:21.299 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:40:59.260 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:44:38.911 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:44:39.338 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:45:00.345 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:45:00.841 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:46:31.982 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:46:32.529 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:47:08.891 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:47:09.307 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:49:40.544 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:49:40.984 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:50:01.983 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:50:02.475 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:51:40.813 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:51:41.273 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:51:54.420 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:51:54.805 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:53:48.011 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:53:48.532 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:55:09.643 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:55:29.933 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:55:30.352 | INFO     | __main__:main:54 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:55:30.360 | INFO     | __main__:main:57 - the shape after: torch.Size([32, 1, 1])
+2024-06-23 20:56:09.135 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:56:21.441 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:56:21.718 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 20:56:21.867 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:56:21.875 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-23 20:57:20.358 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:57:44.261 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:58:05.772 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:58:06.026 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 20:58:06.179 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:58:06.183 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-23 20:59:07.464 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 20:59:07.733 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 20:59:07.878 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 20:59:07.883 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-23 21:01:44.394 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:01:44.688 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:01:44.840 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:02:31.949 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:02:32.261 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:02:32.420 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:03:16.021 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:03:16.354 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:03:16.733 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:03:16.758 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 64])
+2024-06-23 21:04:10.619 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:04:10.903 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:04:11.114 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:04:38.952 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:04:39.208 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:04:39.356 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:05:20.294 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:05:20.538 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:05:20.682 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:05:20.686 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1])
+2024-06-23 21:06:01.191 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:06:01.474 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:06:01.629 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:06:41.758 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:06:42.005 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:06:42.159 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:06:42.166 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1])
+2024-06-23 21:06:57.553 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:06:57.815 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:06:57.975 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:07:25.010 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:07:25.264 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:07:25.421 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:07:25.426 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1])
+2024-06-23 21:07:53.676 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:07:54.001 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:07:54.262 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:07:54.273 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1])
+2024-06-23 21:08:05.760 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:08:06.007 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:08:06.164 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:08:06.169 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1])
+2024-06-23 21:12:17.823 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:12:18.108 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:12:18.331 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:14:34.436 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:14:34.722 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:14:34.924 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:16:03.999 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:16:04.256 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:16:04.947 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:19:19.395 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:19:19.698 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:19:19.843 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:19:19.851 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-23 21:19:42.178 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:19:42.465 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:19:42.617 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:19:42.621 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-23 21:19:55.617 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:19:55.865 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:19:56.310 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:19:56.314 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-23 21:19:56.331 | INFO     | __main__:main:63 - Untrained loss: 10.077102661132812
+2024-06-23 21:20:32.635 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:20:32.898 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:20:33.045 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:20:49.503 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:20:49.771 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:20:49.928 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:21:20.724 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:21:20.989 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:21:21.173 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:21:32.809 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:21:33.072 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:21:33.475 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:21:57.829 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:21:58.073 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:21:58.230 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:22:19.984 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:22:20.293 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:22:20.739 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:22:20.744 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:22:58.198 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:22:58.447 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:22:59.047 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:22:59.104 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:22:59.105 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-23 21:22:59.106 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 21:23:22.932 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:23:23.211 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:23:23.455 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:23:23.515 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:23:23.518 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-23 21:23:48.522 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:23:48.783 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:23:49.389 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:23:49.395 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:23:49.431 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-23 21:24:03.945 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:24:04.227 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:24:04.365 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:24:04.369 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:24:04.382 | INFO     | __main__:main:63 - Untrained loss: 9.18523120880127
+2024-06-23 21:29:48.470 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:29:48.709 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:29:48.861 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:32:47.859 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:32:48.102 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:32:48.242 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:33:19.352 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:33:19.679 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:33:20.233 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:33:20.239 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 192])
+2024-06-23 21:33:20.246 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-23 21:33:38.362 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:33:38.634 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:33:38.962 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:33:38.966 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:33:38.967 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-23 21:34:00.359 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:34:00.657 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:34:00.808 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:34:00.815 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:34:00.816 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-23 21:35:18.696 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:35:19.006 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:35:19.334 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:35:19.345 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:35:19.347 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-23 21:35:43.685 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:35:43.955 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:35:44.096 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:35:44.101 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:35:44.102 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-23 21:36:37.567 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:36:37.839 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:36:38.003 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:36:38.008 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:36:38.009 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-23 21:38:24.517 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:38:24.770 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:38:24.935 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:38:24.979 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:38:24.981 | INFO     | __main__:main:63 - Untrained loss: 16.85944366455078
+2024-06-23 21:38:53.882 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:38:54.149 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:38:54.306 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:38:54.586 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:38:54.588 | INFO     | __main__:main:63 - Untrained loss: 7.337217807769775
+2024-06-23 21:38:54.589 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 21:40:00.060 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:40:00.318 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:40:00.461 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:40:00.530 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:40:00.531 | INFO     | __main__:main:63 - Untrained loss: 10.674921035766602
+2024-06-23 21:40:00.532 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 21:40:24.060 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:40:24.330 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:40:24.480 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:40:24.534 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:40:24.535 | INFO     | __main__:main:63 - Untrained loss: 5.843225479125977
+2024-06-23 21:40:24.535 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 21:40:49.407 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:40:49.686 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:40:49.879 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:40:49.929 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:40:49.931 | INFO     | __main__:main:63 - Untrained loss: 18.269397735595703
+2024-06-23 21:40:49.932 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 21:41:15.491 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:41:15.758 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:41:15.910 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:41:15.958 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:41:15.960 | INFO     | __main__:main:63 - Untrained loss: 7.854163646697998
+2024-06-23 21:41:15.961 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 21:42:30.960 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:42:31.217 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:42:31.357 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 21:42:31.410 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:42:31.412 | INFO     | __main__:main:63 - Untrained loss: 11.4158353805542
+2024-06-23 21:42:31.412 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 21:42:31.420 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240623-214231
+2024-06-23 21:42:32.399 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-23 21:43:47.665 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 21:43:47.932 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 21:43:48.062 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 16])
+2024-06-23 21:43:48.080 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 21:43:48.082 | INFO     | __main__:main:63 - Untrained loss: 25.58481216430664
+2024-06-23 21:43:48.083 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 21:43:48.091 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240623-214348
+2024-06-23 21:43:49.134 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-23 21:46:28.491 | INFO     | mltrainer.trainer:report:191 - Epoch 0 train 6.0548 test 5.4685 metric ['5.4685']
+2024-06-23 21:47:35.169 | INFO     | mltrainer.trainer:report:191 - Epoch 1 train 5.2878 test 5.2130 metric ['5.2130']
+2024-06-23 21:48:41.522 | INFO     | mltrainer.trainer:report:191 - Epoch 2 train 5.1976 test 4.4298 metric ['4.4298']
+2024-06-23 21:49:54.505 | INFO     | mltrainer.trainer:report:191 - Epoch 3 train 3.9049 test 3.7681 metric ['3.7681']
+2024-06-23 21:51:03.727 | INFO     | mltrainer.trainer:report:191 - Epoch 4 train 3.6812 test 3.5486 metric ['3.5486']
+2024-06-23 21:52:06.711 | INFO     | mltrainer.trainer:report:191 - Epoch 5 train 3.5741 test 3.5384 metric ['3.5384']
+2024-06-23 21:53:11.531 | INFO     | mltrainer.trainer:report:191 - Epoch 6 train 3.5286 test 3.5122 metric ['3.5122']
+2024-06-23 21:54:19.983 | INFO     | mltrainer.trainer:report:191 - Epoch 7 train 3.5511 test 3.5264 metric ['3.5264']
+2024-06-23 21:54:19.984 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.5122, current loss 3.5264.Counter 1/10.
+2024-06-23 21:55:24.726 | INFO     | mltrainer.trainer:report:191 - Epoch 8 train 3.5059 test 3.5865 metric ['3.5865']
+2024-06-23 21:55:24.728 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.5122, current loss 3.5865.Counter 2/10.
+2024-06-23 21:56:32.118 | INFO     | mltrainer.trainer:report:191 - Epoch 9 train 3.5364 test 3.5107 metric ['3.5107']
+2024-06-23 21:57:40.796 | INFO     | mltrainer.trainer:report:191 - Epoch 10 train 3.5254 test 3.5401 metric ['3.5401']
+2024-06-23 21:57:40.797 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.5107, current loss 3.5401.Counter 1/10.
+2024-06-23 21:58:50.626 | INFO     | mltrainer.trainer:report:191 - Epoch 11 train 3.5227 test 3.4857 metric ['3.4857']
+2024-06-23 21:59:58.907 | INFO     | mltrainer.trainer:report:191 - Epoch 12 train 3.5313 test 3.4905 metric ['3.4905']
+2024-06-23 21:59:58.907 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4857, current loss 3.4905.Counter 1/10.
+2024-06-23 22:01:08.702 | INFO     | mltrainer.trainer:report:191 - Epoch 13 train 3.5151 test 3.5422 metric ['3.5422']
+2024-06-23 22:01:08.704 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4857, current loss 3.5422.Counter 2/10.
+2024-06-23 22:02:13.604 | INFO     | mltrainer.trainer:report:191 - Epoch 14 train 3.5084 test 3.5248 metric ['3.5248']
+2024-06-23 22:02:13.605 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4857, current loss 3.5248.Counter 3/10.
+2024-06-23 22:03:22.385 | INFO     | mltrainer.trainer:report:191 - Epoch 15 train 3.5155 test 3.5039 metric ['3.5039']
+2024-06-23 22:03:22.386 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4857, current loss 3.5039.Counter 4/10.
+2024-06-23 22:04:28.786 | INFO     | mltrainer.trainer:report:191 - Epoch 16 train 3.5129 test 3.4774 metric ['3.4774']
+2024-06-23 22:05:37.813 | INFO     | mltrainer.trainer:report:191 - Epoch 17 train 3.5185 test 3.4851 metric ['3.4851']
+2024-06-23 22:05:37.814 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4774, current loss 3.4851.Counter 1/10.
+2024-06-23 22:06:44.355 | INFO     | mltrainer.trainer:report:191 - Epoch 18 train 3.5035 test 3.4795 metric ['3.4795']
+2024-06-23 22:06:44.356 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4774, current loss 3.4795.Counter 2/10.
+2024-06-23 22:07:55.990 | INFO     | mltrainer.trainer:report:191 - Epoch 19 train 3.5173 test 3.4985 metric ['3.4985']
+2024-06-23 22:07:55.990 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4774, current loss 3.4985.Counter 3/10.
+2024-06-23 22:09:04.229 | INFO     | mltrainer.trainer:report:191 - Epoch 20 train 3.5077 test 3.5123 metric ['3.5123']
+2024-06-23 22:09:04.229 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4774, current loss 3.5123.Counter 4/10.
+2024-06-23 22:10:14.259 | INFO     | mltrainer.trainer:report:191 - Epoch 21 train 3.5020 test 3.5061 metric ['3.5061']
+2024-06-23 22:10:14.260 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4774, current loss 3.5061.Counter 5/10.
+2024-06-23 22:11:20.017 | INFO     | mltrainer.trainer:report:191 - Epoch 22 train 3.5089 test 3.4756 metric ['3.4756']
+2024-06-23 22:12:29.936 | INFO     | mltrainer.trainer:report:191 - Epoch 23 train 3.5006 test 3.4896 metric ['3.4896']
+2024-06-23 22:12:29.937 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4756, current loss 3.4896.Counter 1/10.
+2024-06-23 22:13:38.710 | INFO     | mltrainer.trainer:report:191 - Epoch 24 train 3.5157 test 3.4854 metric ['3.4854']
+2024-06-23 22:13:38.710 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4756, current loss 3.4854.Counter 2/10.
+2024-06-23 22:14:47.336 | INFO     | mltrainer.trainer:report:191 - Epoch 25 train 3.5133 test 3.4888 metric ['3.4888']
+2024-06-23 22:14:47.337 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4756, current loss 3.4888.Counter 3/10.
+2024-06-23 22:16:01.672 | INFO     | mltrainer.trainer:report:191 - Epoch 26 train 3.4995 test 3.4935 metric ['3.4935']
+2024-06-23 22:16:01.673 | INFO     | mltrainer.trainer:__call__:234 - best loss: 3.4756, current loss 3.4935.Counter 4/10.
+2024-06-23 22:50:30.095 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 22:50:30.340 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 22:50:30.455 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 16])
+2024-06-23 22:50:30.458 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 192])
+2024-06-23 22:50:30.473 | INFO     | __main__:main:63 - Untrained loss: 13.320812225341797
+2024-06-23 22:50:30.474 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 22:50:30.483 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240623-225030
+2024-06-23 22:50:31.455 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-23 23:02:23.566 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:02:52.870 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:02:53.164 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:02:53.733 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 64])
+2024-06-23 23:02:54.130 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-23 23:02:54.132 | INFO     | __main__:main:63 - Untrained loss: 8.711162567138672
+2024-06-23 23:02:54.132 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 23:02:54.141 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240623-230254
+2024-06-23 23:02:55.155 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-23 23:28:48.777 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:28:48.990 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:28:49.110 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 192, 32])
+2024-06-23 23:28:49.141 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 192])
+2024-06-23 23:28:49.146 | INFO     | __main__:main:63 - Untrained loss: 11.408123016357422
+2024-06-23 23:28:49.147 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 23:28:49.155 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240623-232849
+2024-06-23 23:28:50.017 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-23 23:29:26.105 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:29:26.298 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:29:26.416 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 192, 32])
+2024-06-23 23:29:26.443 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 192])
+2024-06-23 23:29:26.448 | INFO     | __main__:main:63 - Untrained loss: 11.41195011138916
+2024-06-23 23:29:26.449 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 23:29:26.458 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240623-232926
+2024-06-23 23:29:27.331 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-23 23:30:01.760 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:30:02.050 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:30:02.219 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 32])
+2024-06-23 23:30:02.224 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 192])
+2024-06-23 23:30:02.229 | INFO     | __main__:main:63 - Untrained loss: 11.518536567687988
+2024-06-23 23:30:02.230 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 23:30:02.238 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240623-233002
+2024-06-23 23:30:03.112 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-23 23:31:49.258 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:31:49.470 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:31:49.545 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 32])
+2024-06-23 23:31:49.553 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 32, 192])
+2024-06-23 23:32:10.183 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:32:10.403 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:32:10.520 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 32])
+2024-06-23 23:32:10.531 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 32, 192])
+2024-06-23 23:32:40.014 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:32:40.211 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:32:40.332 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 32])
+2024-06-23 23:32:40.341 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 32, 192])
+2024-06-23 23:34:24.588 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:34:24.812 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:34:24.934 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 32])
+2024-06-23 23:36:07.885 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:36:08.088 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:36:08.211 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 32])
+2024-06-23 23:36:08.215 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 192])
+2024-06-23 23:36:08.219 | INFO     | __main__:main:63 - Untrained loss: 10.458491325378418
+2024-06-23 23:36:08.219 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 23:36:08.227 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240623-233608
+2024-06-23 23:36:09.096 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-23 23:41:21.644 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:41:21.908 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:41:22.032 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 32])
+2024-06-23 23:41:22.036 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-23 23:41:22.038 | INFO     | __main__:main:63 - Untrained loss: 17.6638126373291
+2024-06-23 23:41:22.038 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-23 23:41:22.047 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240623-234122
+2024-06-23 23:41:22.970 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-23 23:48:11.085 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:48:11.312 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:48:11.434 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 32])
+2024-06-23 23:51:36.578 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:51:36.803 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:52:49.094 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:52:49.333 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:53:35.064 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:53:35.259 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:54:14.782 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:54:14.976 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:54:15.106 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 23:54:53.881 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:54:54.169 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:54:54.310 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 23:55:56.089 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:55:56.326 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:55:56.469 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 23:56:55.369 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:57:28.380 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:57:28.614 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:57:28.709 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 23:58:11.586 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:58:11.794 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:58:11.927 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 23:59:20.110 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:59:20.327 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:59:20.446 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-23 23:59:37.790 | INFO     | __main__:main:24 - starting exam.py
+2024-06-23 23:59:37.982 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-23 23:59:38.075 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:00:31.746 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:00:31.991 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:00:32.137 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:01:12.862 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:01:13.100 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:01:13.239 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:01:44.352 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:01:44.550 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:01:44.646 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:02:35.770 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:02:36.010 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:02:36.147 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:03:22.396 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:03:22.608 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:03:22.703 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:04:08.709 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:04:08.913 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:04:09.014 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:04:09.019 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:04:09.020 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:04:09.020 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:04:53.671 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:04:53.907 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:04:54.043 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:04:54.049 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:04:54.050 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:04:54.051 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:05:26.751 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:05:26.983 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:05:27.135 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:05:27.140 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:05:27.141 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:05:27.142 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:06:06.391 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:06:06.639 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:06:06.792 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:06:06.799 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:06:06.801 | INFO     | __main__:main:63 - Untrained loss: 18.72231674194336
+2024-06-24 00:06:06.802 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:06:06.810 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-000606
+2024-06-24 00:06:07.774 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:06:42.518 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:06:42.777 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:06:42.912 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:06:42.917 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:06:42.918 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:06:42.918 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:06:42.926 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-000642
+2024-06-24 00:06:43.839 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:07:28.004 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:07:28.255 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:07:28.358 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:07:28.363 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:07:28.364 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:07:28.365 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:07:28.372 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-000728
+2024-06-24 00:07:29.161 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:09:18.791 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:09:18.996 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:09:19.096 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:09:19.102 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 192])
+2024-06-24 00:09:19.109 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:09:19.109 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:09:19.115 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-000919
+2024-06-24 00:09:19.886 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:09:57.772 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:09:57.970 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:09:58.118 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:09:58.123 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:09:58.124 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:09:58.125 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:09:58.132 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-000958
+2024-06-24 00:09:58.884 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:10:21.444 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:10:21.677 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:10:21.820 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:10:21.825 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 192])
+2024-06-24 00:10:21.837 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:10:21.838 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:10:21.846 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-001021
+2024-06-24 00:10:22.713 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:10:43.382 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:10:43.604 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:10:43.701 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:10:43.707 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 192])
+2024-06-24 00:10:43.714 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:10:43.715 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:10:43.720 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-001043
+2024-06-24 00:10:44.341 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:11:09.773 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:11:10.014 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:11:10.164 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:11:10.169 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-24 00:11:10.170 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:11:10.171 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:11:10.179 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-001110
+2024-06-24 00:11:11.009 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:12:05.705 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:12:05.916 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:12:06.067 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:12:06.072 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:12:06.073 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:12:06.074 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:12:06.081 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-001206
+2024-06-24 00:12:06.883 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:13:23.617 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:13:23.850 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:13:24.005 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:15:01.385 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:15:01.566 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:15:01.653 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:15:36.345 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:15:36.518 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:15:36.616 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:16:22.821 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:16:23.011 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:16:23.109 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:16:23.115 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 192])
+2024-06-24 00:16:23.120 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:16:23.120 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:16:23.128 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-001623
+2024-06-24 00:16:23.732 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:16:55.912 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:16:56.088 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:16:56.183 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:16:56.187 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:16:56.188 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:16:56.189 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:16:56.196 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-001656
+2024-06-24 00:16:56.790 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:17:21.611 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:17:21.860 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:17:21.957 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:17:21.961 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:17:21.962 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:17:21.962 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:17:21.970 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-001721
+2024-06-24 00:17:22.582 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:17:36.527 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:17:36.730 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:17:36.871 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:18:15.031 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:18:15.208 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:18:15.303 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:18:46.744 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:18:46.938 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:18:47.026 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:19:06.854 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:19:07.050 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:19:07.140 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:19:23.578 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:19:23.758 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:19:23.852 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:19:23.858 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 128])
+2024-06-24 00:19:23.863 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:19:23.863 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:19:23.870 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-001923
+2024-06-24 00:19:24.469 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:20:03.681 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:20:03.867 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:20:03.959 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:20:03.965 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 128])
+2024-06-24 00:20:03.970 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:20:03.970 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:20:03.977 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-002003
+2024-06-24 00:20:04.572 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:21:28.469 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:21:28.652 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:21:28.756 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:21:28.760 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 64])
+2024-06-24 00:21:28.763 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:21:28.763 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:21:28.770 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-002128
+2024-06-24 00:21:29.376 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:22:03.759 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:22:03.942 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:22:04.038 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:22:04.046 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 64])
+2024-06-24 00:22:04.049 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:22:04.049 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:22:04.057 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-002204
+2024-06-24 00:22:04.673 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:22:22.622 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:22:22.811 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:22:22.903 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:22:22.910 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 64])
+2024-06-24 00:22:22.912 | INFO     | __main__:main:63 - Untrained loss: 8.954965591430664
+2024-06-24 00:22:22.913 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:22:22.920 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-002222
+2024-06-24 00:22:23.515 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:22:46.170 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:22:46.356 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:22:46.451 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:23:11.819 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:23:12.001 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:23:12.102 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:23:12.106 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:23:12.106 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:23:12.107 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:23:12.114 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-002312
+2024-06-24 00:23:12.715 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:23:34.762 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:23:34.941 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:23:35.033 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:23:35.039 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 1, 1])
+2024-06-24 00:23:35.040 | INFO     | __main__:main:63 - Untrained loss: nan
+2024-06-24 00:23:35.041 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 00:23:35.048 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-002335
+2024-06-24 00:23:35.637 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
+2024-06-24 00:24:32.383 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:24:32.566 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:24:32.658 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 00:25:43.944 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 00:25:44.111 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 00:25:44.203 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 06:56:02.373 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 06:56:02.576 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 06:56:02.665 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 06:57:06.707 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 06:57:06.883 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 06:57:06.980 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 06:57:40.487 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 06:57:40.674 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 06:57:40.769 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 07:01:27.515 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 07:01:46.105 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 07:01:46.302 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 07:01:46.413 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 07:01:53.596 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 07:01:53.771 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 07:01:53.870 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 07:03:22.218 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 07:03:22.416 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 07:03:22.545 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 1, 64])
+2024-06-24 07:03:22.599 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-24 07:03:22.600 | INFO     | __main__:main:63 - Untrained loss: 11.691638946533203
+2024-06-24 07:03:22.600 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 07:03:22.610 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-070322
+2024-06-24 07:03:23.207 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
