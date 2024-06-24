@@ -2562,3 +2562,13 @@
 2024-06-24 15:14:17.054 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-151417
 2024-06-24 15:14:17.624 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
 2024-06-24 15:14:37.964 | INFO     | mltrainer.trainer:report:191 - Epoch 0 train 1.6847 test 0.4052 metric ['0.4052']
+2024-06-24 20:36:49.602 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 20:36:49.793 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 20:38:10.020 | INFO     | __main__:main:24 - starting exam.py
+2024-06-24 20:38:10.183 | INFO     | __main__:main:53 - the shape before : torch.Size([32, 192, 1])
+2024-06-24 20:38:10.292 | INFO     | __main__:main:56 - the latent shape : torch.Size([32, 64])
+2024-06-24 20:38:10.331 | INFO     | __main__:main:59 - the shape after: torch.Size([32, 192, 1])
+2024-06-24 20:38:10.380 | INFO     | __main__:main:63 - Untrained loss: 23.099164962768555
+2024-06-24 20:38:10.380 | INFO     | __main__:main:65 - starting training for 100 epochs
+2024-06-24 20:38:10.400 | INFO     | mltrainer.trainer:dir_add_timestamp:29 - Logging to logs/20240624-203810
+2024-06-24 20:38:11.213 | INFO     | mltrainer.trainer:__init__:72 - Found earlystop_kwargs in settings.Set to None if you dont want earlystopping.
