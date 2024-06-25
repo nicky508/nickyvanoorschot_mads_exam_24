@@ -18,9 +18,11 @@ import mltrainer
 from mltrainer import ReportTypes, Trainer, TrainerSettings
 mltrainer.__version__
 
-logger.add("logs/vae.log")
+logger.add("logs/rae.log")
 
 def main():
+    gin.parse_config_file(Path(__file__).parent / 'rae_config.gin')
+
     logger.info("starting exam.py")
     # gin.parse_config_file(Path(__file__).parent / 'config.gin')
     
