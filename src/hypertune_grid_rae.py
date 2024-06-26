@@ -18,6 +18,7 @@ import mltrainer
 from mltrainer import ReportTypes, Trainer, TrainerSettings
 mltrainer.__version__
 from scipy.spatial.distance import directed_hausdorff
+from sklearn.metrics import roc_auc_score
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -55,8 +56,10 @@ def calculateOverlapNormalAbnormalReconstructionLoss(dataset, autoencoder):
     normal_losses = losses_per_target['normal']
     abnormal_losses = losses_per_target['abnormal']
     
-    # Compute Hausdorff distance (can be other metrics like KL divergence, Jensen-Shannon divergence, etc.)
-    return directed_hausdorff(np.array(normal_losses).reshape(-1, 1), np.array(abnormal_losses).reshape(-1, 1))[0]
+    all_losses_flat = normal_losses + abnormal_losses
+    targets_flat = [0] * len(normal_losses) + [1] * len(abnormal_losses)
+    
+    return roc_auc_score(targets_flat, all_losses_flat)
     
 def main():
     gin.parse_config_file(Path(__file__).parent / 'rae_config.gin')
@@ -130,7 +133,7 @@ def main():
             trainer.loop()
             logger.success('latent space size: '+str(ls))
             logger.success('hidden state size: '+str(hs))
-            logger.success(f'Hausdorff Distance: {calculateOverlapNormalAbnormalReconstructionLoss(validsdatasetVAE, autoencoder):.4f}')
+            logger.success(f'AUC: {calculateOverlapNormalAbnormalReconstructionLoss(validsdatasetVAE, autoencoder):.4f}')
             logger.success('-------------------------------')
 
     logger.success("finished hypertuning")
