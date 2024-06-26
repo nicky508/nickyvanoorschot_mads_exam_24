@@ -3,16 +3,18 @@ import gin.torch.external_configurables
 Encoder.config = {
     "num_layers" : 1,
     "seq_len" : 192,
-    "latent" : 64,
-    "hidden" : 128,
+    "latent" : 24,
+    "hidden" : 40,
+    "dropout" : 0.2,
     "features" : 1,
 }
 
 Decoder.config = {
     "num_layers" : 1,
     "seq_len" : 192,
-    "latent" : 64,
-    "hidden" : 128,
+    "latent" : 24,
+    "hidden" : 40,
+    "dropout" : 0.2,
     "features" : 1,
 }
 
