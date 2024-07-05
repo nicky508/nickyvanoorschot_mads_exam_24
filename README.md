@@ -2,6 +2,19 @@
 
 Nicky van Oorschot (nicky.vanoorschot@student.hu.nl)
 
+# Report 
+Is added to the base folder of the repository. Due to the limited report size, some images may be a bit downsized. I added the visuals to the folder visuals as well.
+Most important files are:
+
+- Notebook:  02_RAE_model.ipynb, this is the notebook used to create the autoencoder.
+- hypertune_grid_rae.py, the file used to do a grid search on the autoencoder.
+- rae_model.py, this file contains the autoencoder class.
+- datasets.py, is quite the same as delivered, did some changes to be able to filter only the normal heartsamples.
+- streamer.py, is quite the same as deliverd, did some changes to make it useable for trainig the autoencoder.
+
+- hypertune_entrymodel.py, started creating ray script for hypertuning the 2Dconv model, it works, but did not use it in the report because I put al effort in the autoencoder.
+
+
 # MADS-exam-24
 The junior datascientist at your work is pretty confident about his knowledge of all the models; He has helped you out by doing some data exploration for you, and he even created two models!
 
