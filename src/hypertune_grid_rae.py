@@ -88,8 +88,11 @@ def main():
     trainstreamerVAE = VAEstreamer(traindatasetVAE, batchsize=32).stream()
     teststreamerVAE = VAEstreamer(testdatasetVAE, batchsize=32).stream()
 
-    for ls in [8,16,24,32,40]:
-        for hs in [20,30,40,50,60]:
+    # for ls in [8,16,24,32,40,48]:
+        # for hs in [8,16,32,64,128,256]:
+            
+    for ls in [64]:
+        for hs in [32,64,128,256]:
             
             logger.info('start tuning latent space size: '+str(ls)+' hidden state size: '+str(hs))
             
@@ -116,7 +119,7 @@ def main():
                 earlystop_kwargs = {
                     "save": False,
                     "verbose": True,
-                    "patience": 10,
+                    "patience": 6,
                 },
                 scheduler_kwargs={"factor": 0.5, "patience": 10},
             )
